@@ -66,5 +66,10 @@ namespace Test__txt_Kommunikation
             //Options options = sender as Options;
             //options.Hide();
         }
+
+        private void schließenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }
