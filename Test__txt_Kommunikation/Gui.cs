@@ -69,6 +69,7 @@ namespace Test__txt_Kommunikation
         private void button2_Click(object sender, EventArgs e)
         {
             options.Show();
+            options.WindowState = FormWindowState.Normal;
         }
 
         
