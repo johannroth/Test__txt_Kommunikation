@@ -8,8 +8,8 @@ namespace Test__txt_Kommunikation
 {
     class Controller
     {
-        private Form1 gui;
-        public Controller(Form1 gui)
+        private Gui gui;
+        public Controller(Gui gui)
         {
             this.gui = gui;
             gui.buttonClick += OnButtonClick;

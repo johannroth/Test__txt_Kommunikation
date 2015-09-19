@@ -10,14 +10,16 @@ using System.Windows.Forms;
 
 namespace Test__txt_Kommunikation
 {
-    public partial class Form1 : Form
+    public partial class Gui : Form
     {
 
         int count = 0;
+        Options options;
 
-        public Form1()
+        public Gui()
         {
             InitializeComponent();
+            options = new Options();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -63,6 +65,11 @@ namespace Test__txt_Kommunikation
 
         public delegate void buttonClickHandler(Object source, ClickEventArgs e);
         public event buttonClickHandler buttonClick;
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            options.Show();
+        }
 
         
 

@@ -17,7 +17,7 @@ namespace Test__txt_Kommunikation
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            Form1 gui = new Form1();
+            Gui gui = new Gui();
             Controller guiController = new Controller(gui);
 
             Application.Run(gui);

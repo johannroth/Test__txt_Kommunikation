@@ -1,6 +1,6 @@
 ﻿namespace Test__txt_Kommunikation
 {
-    partial class Form1
+    partial class Gui
     {
         /// <summary>
         /// Erforderliche Designervariable.
@@ -35,12 +35,13 @@
             this.testTextButton = new System.Windows.Forms.Button();
             this.testTextBox = new System.Windows.Forms.TextBox();
             this.testTextLabel = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(59, 15);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
@@ -57,8 +58,8 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(91, 199);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Location = new System.Drawing.Point(53, 68);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 28);
             this.button1.TabIndex = 1;
@@ -91,19 +92,30 @@
             this.testTextLabel.TabIndex = 4;
             this.testTextLabel.Text = "Text";
             // 
-            // Form1
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(53, 145);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(177, 23);
+            this.button2.TabIndex = 5;
+            this.button2.Text = "open Options";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // Gui
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(379, 321);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.testTextLabel);
             this.Controls.Add(this.testTextBox);
             this.Controls.Add(this.testTextButton);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Name = "Gui";
+            this.Text = "Gui";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -117,6 +129,7 @@
         private System.Windows.Forms.Button testTextButton;
         private System.Windows.Forms.TextBox testTextBox;
         private System.Windows.Forms.Label testTextLabel;
+        private System.Windows.Forms.Button button2;
 
     }
 }
