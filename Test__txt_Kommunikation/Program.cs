@@ -16,7 +16,11 @@ namespace Test__txt_Kommunikation
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+
+            Form1 gui = new Form1();
+            Controller guiController = new Controller(gui);
+
+            Application.Run(gui);
         }
     }
 }

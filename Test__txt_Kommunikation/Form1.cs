@@ -39,5 +39,32 @@ namespace Test__txt_Kommunikation
                
             System.IO.File.WriteAllText(@"D:\Git-Repos\Test__txt_Kommunikation\Test__txt_Kommunikation\txt-test\test1.txt", textBox1.Text);
         }
+
+        public delegate void UiWriteText(string text);
+        public void WriteText(string text)
+        {
+            if (testTextLabel.InvokeRequired)
+            {
+                UiWriteText d = new UiWriteText(WriteText);
+                Invoke(d, new object[] { text });
+            }
+            else
+            {
+                testTextLabel.Text = text;
+            }
+        }
+
+        private void testTextButton_Click(object sender, EventArgs e)
+        {
+            ClickEventArgs args = new ClickEventArgs();
+            args.text = testTextBox.Text;
+            buttonClick(this, args);
+        }
+
+        public delegate void buttonClickHandler(Object source, ClickEventArgs e);
+        public event buttonClickHandler buttonClick;
+
+        
+
     }
 }
