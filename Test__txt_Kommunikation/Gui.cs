@@ -15,6 +15,7 @@ namespace Test__txt_Kommunikation
 
         int count = 0;
         Options options;
+        DateTime now;
 
         public Gui()
         {
@@ -24,7 +25,8 @@ namespace Test__txt_Kommunikation
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            string newText = string.Format(Environment.NewLine + "test {0}", count.ToString());
+            //string newText = string.Format(Environment.NewLine + "test {0}", count.ToString());
+            string newText = Environment.NewLine + "test";
             textBox1.Text += newText;
             count++;
             textBox1.SelectionStart = textBox1.TextLength;
@@ -70,6 +72,21 @@ namespace Test__txt_Kommunikation
         {
             options.Show();
             options.WindowState = FormWindowState.Normal;
+        }
+
+        private void writeTimeButton_Click(object sender, EventArgs e)
+        {
+            now = DateTime.Now;
+            writtenTimeLabel.Text = now.ToString("dd.MM.yyyy HH:mm:ss.fff");
+        }
+
+        private void timeSinceLastWriteButton_Click(object sender, EventArgs e)
+        {
+            if (now != null)
+            {
+                TimeSpan timeSince = DateTime.Now.Subtract(now);
+                timeSinceLabel.Text = timeSince.ToString(@"hh\:mm\:ss\.fff");
+            }
         }
 
         

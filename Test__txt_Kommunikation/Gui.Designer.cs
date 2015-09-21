@@ -36,6 +36,10 @@
             this.testTextBox = new System.Windows.Forms.TextBox();
             this.testTextLabel = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
+            this.writeTimeButton = new System.Windows.Forms.Button();
+            this.timeSinceLastWriteButton = new System.Windows.Forms.Button();
+            this.writtenTimeLabel = new System.Windows.Forms.Label();
+            this.timeSinceLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // textBox1
@@ -102,11 +106,53 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // writeTimeButton
+            // 
+            this.writeTimeButton.Location = new System.Drawing.Point(15, 191);
+            this.writeTimeButton.Name = "writeTimeButton";
+            this.writeTimeButton.Size = new System.Drawing.Size(138, 23);
+            this.writeTimeButton.TabIndex = 6;
+            this.writeTimeButton.Text = "writeTime";
+            this.writeTimeButton.UseVisualStyleBackColor = true;
+            this.writeTimeButton.Click += new System.EventHandler(this.writeTimeButton_Click);
+            // 
+            // timeSinceLastWriteButton
+            // 
+            this.timeSinceLastWriteButton.Location = new System.Drawing.Point(15, 220);
+            this.timeSinceLastWriteButton.Name = "timeSinceLastWriteButton";
+            this.timeSinceLastWriteButton.Size = new System.Drawing.Size(138, 23);
+            this.timeSinceLastWriteButton.TabIndex = 7;
+            this.timeSinceLastWriteButton.Text = "timeSinceLastWrite";
+            this.timeSinceLastWriteButton.UseVisualStyleBackColor = true;
+            this.timeSinceLastWriteButton.Click += new System.EventHandler(this.timeSinceLastWriteButton_Click);
+            // 
+            // writtenTimeLabel
+            // 
+            this.writtenTimeLabel.AutoSize = true;
+            this.writtenTimeLabel.Location = new System.Drawing.Point(168, 196);
+            this.writtenTimeLabel.Name = "writtenTimeLabel";
+            this.writtenTimeLabel.Size = new System.Drawing.Size(115, 17);
+            this.writtenTimeLabel.TabIndex = 8;
+            this.writtenTimeLabel.Text = "writtenTimeLabel";
+            // 
+            // timeSinceLabel
+            // 
+            this.timeSinceLabel.AutoSize = true;
+            this.timeSinceLabel.Location = new System.Drawing.Point(168, 226);
+            this.timeSinceLabel.Name = "timeSinceLabel";
+            this.timeSinceLabel.Size = new System.Drawing.Size(104, 17);
+            this.timeSinceLabel.TabIndex = 9;
+            this.timeSinceLabel.Text = "timeSinceLabel";
+            // 
             // Gui
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(379, 321);
+            this.Controls.Add(this.timeSinceLabel);
+            this.Controls.Add(this.writtenTimeLabel);
+            this.Controls.Add(this.timeSinceLastWriteButton);
+            this.Controls.Add(this.writeTimeButton);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.testTextLabel);
             this.Controls.Add(this.testTextBox);
@@ -130,6 +176,10 @@
         private System.Windows.Forms.TextBox testTextBox;
         private System.Windows.Forms.Label testTextLabel;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button writeTimeButton;
+        private System.Windows.Forms.Button timeSinceLastWriteButton;
+        private System.Windows.Forms.Label writtenTimeLabel;
+        private System.Windows.Forms.Label timeSinceLabel;
 
     }
 }
